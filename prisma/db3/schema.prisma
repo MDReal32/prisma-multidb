@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../.prisma/generated3"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("PRISMA_DB_3")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  someData3 String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

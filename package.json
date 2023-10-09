@@ -1,0 +1,22 @@
+{
+  "name": "test-multidb",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "ts-node --project tsconfig.json src/index.ts",
+    "prisma:migrate": "./scripts/migrate.sh"
+  },
+  "dependencies": {
+    "@prisma/client": "5.4.1",
+    "prisma": "5.4.1"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "4.2.0",
+    "@types/node": "20.8.3",
+    "prettier": "3.0.3",
+    "prettier-plugin-packagejson": "2.4.6",
+    "prettier-plugin-tsconfig": "0.0.1",
+    "ts-node": "10.9.1",
+    "typescript": "5.2.2"
+  },
+  "packageManager": "yarn@3.6.4"
+}

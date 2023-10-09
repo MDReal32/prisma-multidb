@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+  db1:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./db/1:/var/lib/postgresql/data
+      - .ci/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+  db2:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./db/2:/var/lib/postgresql/data
+      - .ci/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5433:5432"
+  db3:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./db/3:/var/lib/postgresql/data
+      - .ci/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5434:5432"
+  db4:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./db/4:/var/lib/postgresql/data
+      - .ci/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5435:5432"
+  db5:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./db/5:/var/lib/postgresql/data
+      - .ci/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5436:5432"
+  db6:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./db/6:/var/lib/postgresql/data
+      - .ci/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5437:5432"

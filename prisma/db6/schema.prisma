@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../.prisma/generated6"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("PRISMA_DB_6")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  someData6 String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
